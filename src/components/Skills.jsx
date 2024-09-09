@@ -1,4 +1,4 @@
-import { Reorder } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function Component() {
   const skills = [
@@ -50,21 +50,44 @@ export default function Component() {
   ];
 
   return (
-    <section className="w-full min-h-[90vh] py-6 md:py-24 lg:py-16 bg-muted">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="w-full min-h-[90vh] py-6 md:py-24 lg:py-16 bg-muted"
+    >
       <div className="container mx-auto px-4 md:px-6">
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
+        <motion.div
+          className="flex flex-col items-center justify-center space-y-4 text-center"
+        >
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">
+            <motion.h2
+              initial={{ x: -250, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="text-3xl font-bold tracking-tighter sm:text-5xl"
+            >
               My Skills
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            </motion.h2>
+            <motion.p
+              initial={{ x: 220, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ duration: 1 }}
+              className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+            >
               Here are the technical skills I've developed. I'm proficient in a
               variety of web development technologies, and I'm always eager to
               learn more.
-            </p>
+            </motion.p>
           </div>
-        </div>
-        <div className="grid grid-cols-2 gap-6 mt-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 animate-fade-in">
+        </motion.div>
+        <motion.div
+          initial={{ y: 200, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="grid grid-cols-2 gap-6 mt-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 animate-fade-in"
+        >
           {skills.map((skill) => (
             <div
               key={skill.id}
@@ -76,9 +99,9 @@ export default function Component() {
               </p>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

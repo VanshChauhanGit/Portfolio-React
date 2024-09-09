@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function Component() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-20">
+    <motion.section
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      className="w-full py-12 md:py-24 lg:py-20"
+    >
       <div className="container mx-auto px-4 md:px-6">
         <div className="mb-8 space-y-2">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
@@ -155,6 +162,6 @@ export default function Component() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
