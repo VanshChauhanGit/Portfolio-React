@@ -25,9 +25,9 @@ export default function Component() {
   ];
 
   return (
-    <footer className=" py-12 border-t ">
-      <div className="container mx-auto grid grid-cols-1 gap-8 px-4 sm:grid-cols-2 md:grid-cols-3 justify-evenly">
-        <div className="flex min-w-48 text-start flex-col justify-center items-center gap-4">
+    <footer className="py-12 border-t-2 ">
+      <div className="container grid grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-3 justify-evenly">
+        <div className="flex flex-col items-center justify-center gap-4 min-w-48 text-start">
           <Link to={"/"} className="flex items-center gap-2 text-lg font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ export default function Component() {
             ))}
           </nav>
         </div>
-        <div className="flex min-w-48 text-center flex-col justify-center items-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 text-center min-w-48">
           <h3 className="text-lg font-semibold">Social</h3>
           <nav className="grid gap-2">
             <Link
@@ -71,7 +71,7 @@ export default function Component() {
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
               prefetch={false}
             >
-              <TwitterIcon className="h-5 w-5" />
+              <TwitterIcon className="w-5 h-5" />
               Twitter
             </Link>
             <Link
@@ -79,7 +79,7 @@ export default function Component() {
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
               prefetch={false}
             >
-              <LinkedinIcon className="h-5 w-5" />
+              <LinkedinIcon className="w-5 h-5" />
               LinkedIn
             </Link>
             <Link
@@ -87,7 +87,7 @@ export default function Component() {
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
               prefetch={false}
             >
-              <GitlabIcon className="h-5 w-5" />
+              <GitlabIcon className="w-5 h-5" />
               GitHub
             </Link>
             <Link
@@ -95,12 +95,12 @@ export default function Component() {
               className="flex items-center gap-2 text-muted-foreground hover:text-foreground"
               prefetch={false}
             >
-              <InstagramIcon className="h-5 w-5" />
+              <InstagramIcon className="w-5 h-5" />
               Instagram
             </Link>
           </nav>
         </div>
-        <div className="flex min-w-48 text-start flex-col justify-center items-center gap-4">
+        <div className="flex flex-col items-center justify-center gap-4 min-w-48 text-start">
           <h3 className="text-lg font-semibold">Contact</h3>
           <nav className="grid gap-2">
             <Link
@@ -127,7 +127,7 @@ export default function Component() {
           </nav>
         </div>
       </div>
-      <div className="mt-12 border-t pt-6 text-center text-sm text-muted-foreground">
+      <div className="pt-6 mt-12 text-sm text-center border-t text-muted-foreground">
         &copy; 2024 Vansh Chauhan's Portfolio. All rights reserved.
       </div>
     </footer>

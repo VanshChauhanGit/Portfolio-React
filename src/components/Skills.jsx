@@ -55,9 +55,9 @@ export default function Component() {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
-      className="w-full min-h-[90vh] py-6 md:py-24 lg:py-16 bg-muted"
+      className="w-full bg-white min-h-[90vh] py-6 md:py-24 lg:py-16 bg-muted"
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container px-4 mx-auto md:px-6">
         <motion.div
           className="flex flex-col items-center justify-center space-y-4 text-center"
         >
@@ -91,7 +91,7 @@ export default function Component() {
           {skills.map((skill) => (
             <div
               key={skill.id}
-              className="flex flex-col items-center justify-center p-4 bg-background rounded-lg shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg"
+              className="flex items-center justify-center p-4 transition-all duration-300 transform bg-gray-100 rounded-lg shadow-sm bg-gray-100l bg-background hover:-translate-y-2 hover:shadow-lg"
             >
               {skill.icon}
               <p className="mt-2 text-sm font-medium text-foreground">
