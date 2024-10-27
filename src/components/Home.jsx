@@ -131,7 +131,8 @@ const Home = () => {
           </motion.div>
         ))}
         <div className="">
-          <Spline scene="https://prod.spline.design/5YBKmAWNXL1LrWBa/scene.splinecode" />
+          {/* <Spline scene="https://prod.spline.design/5YBKmAWNXL1LrWBa/scene.splinecode" /> */}
+          <Spline scene="https://prod.spline.design/9qblrbvgdM5c0IvK/scene.splinecode" />
         </div>
       </div>
 

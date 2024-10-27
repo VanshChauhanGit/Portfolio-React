@@ -53,8 +53,10 @@ export default function Component() {
               key={item.name}
               to={item.slug}
               className={({ isActive }) =>
-                `text-lg font-medium transition-colors hover:text-primary relative before:absolute before:content-[''] before:w-0 before:h-[2px] before:bg-primary before:left-0 before:top-0 before:transition-all before:duration-300 hover:before:w-full after:absolute after:content-[''] after:w-0 after:h-[2px] after:bg-primary after:right-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full ${
-                  isActive ? "text-gray-500 hover:text-gray-500" : ""
+                `text-lg font-medium transition-colors relative before:absolute before:content-[''] before:w-0 before:h-[2px] before:left-0 before:top-0 before:transition-all before:duration-300 hover:before:w-full after:absolute after:content-[''] after:w-0 after:h-[2px] after:right-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full ${
+                  isActive
+                    ? "text-gray-500 hover:text-gray-500 before:bg-gray-500 after:bg-gray-500 before:duration-500"
+                    : "before:bg-black after:bg-black"
                 }`
               }
               prefetch={false}
