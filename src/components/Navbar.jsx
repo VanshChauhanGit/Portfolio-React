@@ -1,4 +1,3 @@
-import { Link, NavLink } from "react-router-dom";
 import {
   Sheet,
   SheetTrigger,
@@ -6,32 +5,33 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
+import { NavLink, Link } from "react-router-dom";
 
-export default function Component() {
+export default function Component({ scrollToSection, refs }) {
   const navItems = [
     {
       name: "Home",
-      slug: "/",
+      ref: refs.homeRef,
       icon: <HomeIcon className="w-6 h-6" />,
     },
     {
       name: "About",
-      slug: "/about",
+      ref: refs.aboutRef,
       icon: <UserIcon className="w-6 h-6" />,
     },
     {
       name: "Skills",
-      slug: "/skills",
+      ref: refs.skillsRef,
       icon: <BriefcaseIcon className="w-6 h-6" />,
     },
     {
       name: "Projects",
-      slug: "/projects",
+      ref: refs.projectRef,
       icon: <FolderIcon className="w-6 h-6" />,
     },
     {
       name: "Contact",
-      slug: "/contact-me",
+      ref: refs.contactRef,
       icon: <MailIcon className="w-6 h-6" />,
     },
   ];
@@ -41,26 +41,21 @@ export default function Component() {
       <div className="container flex items-center justify-between h-16 px-4 mx-auto md:px-6">
         <Link
           to={"/"}
-          className="flex items-center gap-2 text-lg font-bold"
+          className="flex items-center gap-2 text-2xl font-bold"
           prefetch={false}
         >
-          <MountainIcon className="w-6 h-6" />
+          {/* <MountainIcon className="w-6 h-6 " /> */}
+          <img src="/image.png" className="size-9"></img>
           <span>Vansh Chauhan</span>
         </Link>
         <nav className="hidden gap-4 md:flex">
           {navItems.map((item) => (
             <NavLink
               key={item.name}
-              to={item.slug}
-              className={({ isActive }) =>
-                `text-lg font-medium transition-colors relative before:absolute before:content-[''] before:w-0 before:h-[2px] before:left-0 before:top-0 before:transition-all before:duration-300 hover:before:w-full after:absolute after:content-[''] after:w-0 after:h-[2px] after:right-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full ${
-                  isActive
-                    ? "text-gray-500 hover:text-gray-500 before:bg-gray-500 after:bg-gray-500 before:duration-500"
-                    : "before:bg-black after:bg-black"
-                }`
-              }
-              prefetch={false}
+              onClick={() => scrollToSection(item.ref)}
+              className={`text-lg font-medium transition-colors relative before:absolute before:content-[''] before:w-0 before:h-[2px] before:left-0 before:top-0 before:transition-all before:duration-300 hover:before:w-full after:absolute after:content-[''] after:w-0 after:h-[2px] after:right-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full before:bg-black after:bg-black`}
             >
+              {/* {item.icon} */}
               {item.name}
             </NavLink>
           ))}
@@ -76,14 +71,13 @@ export default function Component() {
             <div className="grid gap-4 p-4">
               {navItems.map((item) => (
                 <SheetClose asChild key={item.name}>
-                  <Link
-                    to={item.slug}
-                    className="flex py-2 text-center items-center gap-2 text-sm font-medium transition-colors hover:text-primary relative before:absolute before:content-[''] before:w-0 before:h-[2px] before:bg-primary before:left-0 before:top-0 before:transition-all before:duration-300 hover:before:w-full after:absolute after:content-[''] after:w-0 after:h-[2px] after:bg-primary after:right-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full"
-                    prefetch={false}
+                  <a
+                    onClick={() => scrollToSection(item.ref)}
+                    className="py-2 text-sm font-medium text-center transition-colors hover:text-primary"
                   >
                     {item.icon}
                     {item.name}
-                  </Link>
+                  </a>
                 </SheetClose>
               ))}
             </div>

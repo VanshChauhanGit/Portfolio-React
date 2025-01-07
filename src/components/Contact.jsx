@@ -26,7 +26,7 @@ export default function Contact() {
         animate={{ scale: 0.95, rotate: 360 }}
         transition={{ duration: 1 }}
       >
-        <Card className="mx-auto max-w-md my-10">
+        <Card className="mx-32 my-10 py-2">
           <CardHeader>
             <CardTitle>Contact Us</CardTitle>
             <CardDescription>

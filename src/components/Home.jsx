@@ -10,6 +10,11 @@ import {
   FaGitAlt,
 } from "react-icons/fa";
 import { SiTailwindcss, SiMongodb, SiExpress } from "react-icons/si";
+import About from "./About";
+import Projects from "./Projects";
+import Contact from "./Contact";
+import Skills from "./Skills";
+import Navbar from "./Navbar";
 
 const bubbleData = [
   {
@@ -108,54 +113,93 @@ const bubbleData = [
 const Home = () => {
   const constraintsRef = useRef(null);
 
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const skillsRef = useRef(null);
+  const projectRef = useRef(null);
+  const contactRef = useRef(null);
+
+  const scrollToSection = (ref) => {
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="relative min-h-[90vh] bg-white dark:bg-black overflow-hidden">
-      <div className="absolute inset-0" ref={constraintsRef}>
-        {bubbleData.map((bubble, index) => (
-          <motion.div
-            key={index}
-            drag
-            dragConstraints={constraintsRef}
-            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-            className={`absolute flex items-center justify-center ${bubble.style}`}
-            animate={{
-              ...bubble.animation,
-              transition: {
-                duration: bubble.animation.duration,
-                repeat: Infinity,
-                repeatType: bubble.animation.repeatType,
-              },
-            }}
+    <>
+      <Navbar
+        scrollToSection={scrollToSection}
+        refs={{ aboutRef, homeRef, skillsRef, contactRef, projectRef }}
+      />
+      <div
+        ref={homeRef}
+        className="relative min-h-screen bg-white dark:bg-black overflow-hidden"
+      >
+        <div className="absolute inset-0" ref={constraintsRef}>
+          {bubbleData.map((bubble, index) => (
+            <motion.div
+              key={index}
+              drag
+              dragConstraints={constraintsRef}
+              dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+              className={`absolute flex items-center justify-center ${bubble.style}`}
+              animate={{
+                ...bubble.animation,
+                transition: {
+                  duration: bubble.animation.duration,
+                  repeat: Infinity,
+                  repeatType: bubble.animation.repeatType,
+                },
+              }}
+            >
+              {bubble.icon}
+            </motion.div>
+          ))}
+          <div className="flex items-center justify-center w-full h-full md:h-auto md:w-auto">
+            {/* <Spline
+              scene="https://prod.spline.design/9qblrbvgdM5c0IvK/scene.splinecode"
+              className="w-full h-[300px] md:h-[600px]"
+            /> */}
+          </div>
+        </div>
+
+        {/* Name and Subheading */}
+        <div className="relative mt-[40vh] flex flex-col justify-center items-center h-fit w-fit mx-auto text-center">
+          <motion.h1
+            className="text-4xl font-bold text-black md:text-6xl md:dark:text-white"
+            initial={{ opacity: 0, y: -50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
           >
-            {bubble.icon}
-          </motion.div>
-        ))}
-        <div className="">
-          {/* <Spline scene="https://prod.spline.design/5YBKmAWNXL1LrWBa/scene.splinecode" /> */}
-          <Spline scene="https://prod.spline.design/9qblrbvgdM5c0IvK/scene.splinecode" />
+            Vansh Chauhan
+          </motion.h1>
+          <motion.h2
+            className="mt-4 text-xl text-gray-500 md:text-3xl"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            MERN Stack Developer
+          </motion.h2>
         </div>
       </div>
-
-      {/* Name and Subheading */}
-      <div className="relative mt-[40vh] flex flex-col justify-center items-center h-fit w-fit mx-auto text-center">
-        <motion.h1
-          className="text-4xl font-bold text-black md:text-6xl md:dark:text-white"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-        >
-          Vansh Chauhan
-        </motion.h1>
-        <motion.h2
-          className="mt-4 text-xl text-gray-500 md:text-3xl"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          MERN Stack Developer
-        </motion.h2>
+      <hr />
+      <div className="pt-16" ref={aboutRef}>
+        <About />
       </div>
-    </div>
+      <hr />
+      <div className="pt-16" ref={skillsRef}>
+        <Skills />
+      </div>
+      <hr />
+      <div className="pt-16" ref={projectRef}>
+        <Projects />
+      </div>
+      <hr />
+      <div className="pt-16" ref={contactRef}>
+        <Contact />
+      </div>
+    </>
   );
 };
 

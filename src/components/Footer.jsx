@@ -1,67 +1,19 @@
 import { Link, NavLink } from "react-router-dom";
 
 export default function Component() {
-  const navItems = [
-    {
-      name: "Home",
-      slug: "/",
-    },
-    {
-      name: "About",
-      slug: "/about",
-    },
-    {
-      name: "Skills",
-      slug: "/skills",
-    },
-    {
-      name: "Projects",
-      slug: "/projects",
-    },
-    {
-      name: "Contact",
-      slug: "/contact-me",
-    },
-  ];
-
   return (
     <footer className="py-12 border-t-2 ">
       <div className="container grid grid-cols-1 gap-8 px-4 mx-auto sm:grid-cols-2 md:grid-cols-3 justify-evenly">
         <div className="flex flex-col items-center justify-center gap-4 min-w-48 text-start">
-          <Link to={"/"} className="flex items-center gap-2 text-lg font-bold">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 500 150"
-              width="150"
-            >
-              <text
-                x="10"
-                y="100"
-                font-family="Arial"
-                font-size="100"
-                fill="none"
-                stroke="black"
-                stroke-width="5"
-              >
-                VANSH
-              </text>
-            </svg>
+          <Link
+            to={"/"}
+            className="flex items-center gap-2 text-2xl font-bold"
+            prefetch={false}
+          >
+            {/* <MountainIcon className="w-6 h-6 " /> */}
+            <img src="/image.png" className="size-9"></img>
+            <span>Vansh Chauhan</span>
           </Link>
-          <nav className="grid gap-2">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.slug}
-                className={({ isActive }) =>
-                  `text-muted-foreground hover:text-foreground ${
-                    isActive ? "underline text-black font-bold" : ""
-                  }`
-                }
-              >
-                {item.name}
-              </NavLink>
-            ))}
-          </nav>
         </div>
         <div className="flex flex-col items-center justify-center gap-4 text-center min-w-48">
           <h3 className="text-lg font-semibold">Social</h3>

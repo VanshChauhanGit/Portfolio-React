@@ -10,16 +10,16 @@ const About = () => {
       exit={{ opacity: 0 }}
       transition={{ duration: 1 }}
       id="about"
-      className="min-h-screen px-8 py-16 bg-white dark:bg-black md:px-16 lg:px-32"
+      className="min-h-[90vh] px-8 py-16 bg-white dark:bg-black md:px-16 lg:px-32"
     >
-      <div className="container flex flex-col items-center justify-center mx-auto md:flex-row">
+      <div className="container flex flex-col items-center justify-center mx-auto my-auto md:flex-row">
         {/* Image and Social Icons */}
         <div className="flex flex-col items-center justify-start mb-8 md:w-1/3 md:mb-0 md:justify-evenly">
           <motion.img
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.5 }}
-            src="/vansh.jpg"
+            src="/Vansh-Image.png"
             width={250}
             height={250}
             alt="Vansh Chauhan"
@@ -44,7 +44,7 @@ const About = () => {
             transition={{ duration: 0.9 }}
             className="mb-4 text-4xl font-bold text-black dark:text-white"
           >
-            About Me
+            About Me !
           </motion.h2>
           <motion.div
             initial={{ y: 100, x: 100 }}
