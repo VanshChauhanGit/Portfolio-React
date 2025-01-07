@@ -26,7 +26,7 @@ export default function Contact() {
         animate={{ scale: 0.95, rotate: 360 }}
         transition={{ duration: 1 }}
       >
-        <Card className="mx-32 my-10 py-2">
+        <Card className="mx-4 sm:mx-8 md:mx-16 lg:mx-32 my-10 py-4 sm:py-6 md:py-8">
           <CardHeader>
             <CardTitle>Contact Us</CardTitle>
             <CardDescription>
@@ -36,7 +36,7 @@ export default function Contact() {
           </CardHeader>
           <CardContent>
             <form className="space-y-4">
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="first-name">First Name</Label>
                   <Input id="first-name" placeholder="Enter your first name" />

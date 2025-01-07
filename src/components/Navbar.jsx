@@ -71,13 +71,13 @@ export default function Component({ scrollToSection, refs }) {
             <div className="grid gap-4 p-4">
               {navItems.map((item) => (
                 <SheetClose asChild key={item.name}>
-                  <a
+                  <Button
                     onClick={() => scrollToSection(item.ref)}
-                    className="py-2 text-sm font-medium text-center transition-colors hover:text-primary"
+                    className="py-2 text-sm font-medium gap-2 text-center transition-colors onClick:text-black onClick:bg-white"
                   >
                     {item.icon}
                     {item.name}
-                  </a>
+                  </Button>
                 </SheetClose>
               ))}
             </div>
