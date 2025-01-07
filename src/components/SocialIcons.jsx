@@ -7,7 +7,8 @@ const SocialIcons = () => {
       <ul className="example-2">
         <li className="icon-content">
           <a
-            href="https://linkedin.com/"
+            href="https://www.linkedin.com/in/vansh-chauhan-741a5b257/"
+            target="_blank"
             aria-label="LinkedIn"
             data-social="linkedin"
           >
@@ -32,6 +33,7 @@ const SocialIcons = () => {
         <li className="icon-content">
           <a
             href="https://github.com/VanshChauhanGit"
+            target="_blank"
             aria-label="GitHub"
             data-social="github"
           >
@@ -55,7 +57,8 @@ const SocialIcons = () => {
         </li>
         <li className="icon-content">
           <a
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/vansh_.chauhan_/"
+            target="_blank"
             aria-label="Instagram"
             data-social="instagram"
           >
