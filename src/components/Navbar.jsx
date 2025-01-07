@@ -73,7 +73,7 @@ export default function Component({ scrollToSection, refs }) {
                 <SheetClose asChild key={item.name}>
                   <Button
                     onClick={() => scrollToSection(item.ref)}
-                    className="py-2 text-sm font-medium gap-2 text-center transition-colors onClick:text-black onClick:bg-white"
+                    className="py-2 text-sm font-medium gap-2 text-left justify-start transition-colors"
                   >
                     {item.icon}
                     {item.name}
@@ -184,25 +184,6 @@ function MenuIcon(props) {
       <line x1="4" x2="20" y1="12" y2="12" />
       <line x1="4" x2="20" y1="6" y2="6" />
       <line x1="4" x2="20" y1="18" y2="18" />
-    </svg>
-  );
-}
-
-function MountainIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m8 3 4 8 5-5 5 15H2L8 3z" />
     </svg>
   );
 }

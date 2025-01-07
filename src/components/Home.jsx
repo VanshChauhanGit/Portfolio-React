@@ -155,16 +155,16 @@ const Home = () => {
               {bubble.icon}
             </motion.div>
           ))}
-          <div className="flex items-center justify-center w-full h-full md:h-auto md:w-auto">
-            {/* <Spline
+          <div className="hidden md:flex md:justify-center md:items-center justify-center w-full h-full">
+            <Spline
               scene="https://prod.spline.design/9qblrbvgdM5c0IvK/scene.splinecode"
-              className="w-full h-[300px] md:h-[600px]"
-            /> */}
+              className="w-full md:h-[600px]"
+            />
           </div>
         </div>
 
         {/* Name and Subheading */}
-        <div className="relative mt-[40vh] flex flex-col justify-center items-center h-fit w-fit mx-auto text-center">
+        <div className="relative mt-[45vh] flex flex-col justify-center items-center h-fit w-fit mx-auto text-center">
           <motion.h1
             className="text-4xl font-bold text-black md:text-6xl md:dark:text-white"
             initial={{ opacity: 0, y: -50 }}
