@@ -58,9 +58,7 @@ export default function Component() {
       className="w-full bg-white min-h-[90vh] py-6 md:py-24 lg:py-16 bg-muted"
     >
       <div className="container px-4 mx-auto md:px-6">
-        <motion.div
-          className="flex flex-col items-center justify-center space-y-4 text-center"
-        >
+        <motion.div className="flex flex-col items-center justify-center space-y-4 text-center">
           <div className="space-y-2">
             <motion.h2
               initial={{ x: -250, opacity: 0 }}

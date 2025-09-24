@@ -133,7 +133,7 @@ const Home = () => {
       />
       <div
         ref={homeRef}
-        className="relative min-h-screen bg-white dark:bg-black overflow-hidden"
+        className="relative min-h-screen overflow-hidden bg-white dark:bg-black"
       >
         <div className="absolute inset-0" ref={constraintsRef}>
           {bubbleData.map((bubble, index) => (
@@ -155,12 +155,12 @@ const Home = () => {
               {bubble.icon}
             </motion.div>
           ))}
-          <div className="hidden md:flex md:justify-center md:items-center justify-center w-full h-full">
+          {/* <div className="justify-center hidden w-full h-full md:flex md:justify-center md:items-center">
             <Spline
               scene="https://prod.spline.design/9qblrbvgdM5c0IvK/scene.splinecode"
               className="w-full md:h-[600px]"
             />
-          </div>
+          </div> */}
         </div>
 
         {/* Name and Subheading */}
@@ -179,7 +179,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            MERN Stack Developer
+            Full Stack Developer
           </motion.h2>
         </div>
       </div>
