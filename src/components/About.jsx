@@ -51,24 +51,29 @@ const About = () => {
             animate={{ y: 0, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="mb-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
+            <p className="mb-4 text-lg leading-relaxed text-center text-gray-600 dark:text-gray-300">
               Hi, I'm{" "}
               <span className="font-bold text-black dark:text-white">
                 Vansh Chauhan
               </span>
-              , a passionate MERN Stack Developer with a love for building
-              dynamic and responsive web applications. With a deep understanding
+              , a passionate Full Stack Developer with a love for building
+              dynamic and responsive web applications with a deep understanding
               of both front-end and back-end technologies, I enjoy creating
-              seamless user experiences using modern tools like React, Tailwind
-              CSS, and Node.js. My journey into full-stack development has been
-              driven by a constant curiosity and a desire to solve real-world
-              problems with clean, efficient code.
+              seamless user experiences using modern tools & technologies like
+              React, Tailwind CSS, Node.js, Express.js, MongoDB, Next.js, React
+              Native and more.
+            </p>
+            <p>
+              My journey into full-stack development has been driven by a
+              constant curiosity and a desire to solve real-world problems with
+              clean, efficient code.
             </p>
             <p className="text-lg leading-relaxed text-gray-600 dark:text-gray-300">
               Whether it's building interactive user interfaces or managing
               databases, I aim to deliver high-quality, scalable solutions. I am
               always excited to learn new technologies and improve my skills to
-              keep up with the fast-paced world of web development.
+              keep up with the fast-paced world of web development along with
+              app development.
             </p>
           </motion.div>
         </div>
