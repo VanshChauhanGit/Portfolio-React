@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 const SocialIcons = () => {
@@ -7,7 +6,7 @@ const SocialIcons = () => {
       <ul className="example-2">
         <li className="icon-content">
           <a
-            href="https://www.linkedin.com/in/vansh-chauhan-741a5b257/"
+            href="https://www.linkedin.com/in/vanshchauhan0/"
             target="_blank"
             aria-label="LinkedIn"
             data-social="linkedin"
@@ -57,7 +56,7 @@ const SocialIcons = () => {
         </li>
         <li className="icon-content">
           <a
-            href="https://www.instagram.com/vansh_.chauhan_/"
+            href="https://www.instagram.com/vansh_.chauhan/"
             target="_blank"
             aria-label="Instagram"
             data-social="instagram"
