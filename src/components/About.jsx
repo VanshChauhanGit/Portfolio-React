@@ -51,7 +51,7 @@ const About = () => {
             animate={{ y: 0, x: 0 }}
             transition={{ duration: 1 }}
           >
-            <p className="mb-4 text-lg leading-relaxed text-center text-gray-600 dark:text-gray-300">
+            <p className="mb-4 text-lg leading-relaxed text-justify text-gray-600 dark:text-gray-300">
               Hi, I'm{" "}
               <span className="font-bold text-black dark:text-white">
                 Vansh Chauhan
@@ -63,7 +63,7 @@ const About = () => {
               React, Tailwind CSS, Node.js, Express.js, MongoDB, Next.js, React
               Native and more.
             </p>
-            <p>
+            <p className="mb-4 text-lg leading-relaxed text-gray-600 dark:text-gray-300">
               My journey into full-stack development has been driven by a
               constant curiosity and a desire to solve real-world problems with
               clean, efficient code.
